@@ -4,14 +4,14 @@ const morgan = require ('morgan');
 const path = require('path');
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT;
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname,"/public/")));  //กำหนด Path หน้าเว็บไซต์
 
 app.get("/",(req,res) =>{
 
-    res.send('Hello borntodev by Bas');
+    res.send('Hello borntodev1 by Bas');
 
 })
 
