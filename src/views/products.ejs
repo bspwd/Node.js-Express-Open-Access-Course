@@ -9,14 +9,14 @@
     </title>
     <link
       rel="shortcut icon"
-      href="assets/images/favicon.png"
+      href="../assets/images/favicon.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="stylesheet" href="../assets/css/animate.css" />
+    <link rel="stylesheet" href="../assets/css/tailwind.css" />
 
     <!-- ==== WOW JS ==== -->
-    <script src="assets/js/wow.min.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
     <script>
       new WOW().init();
     </script>
@@ -31,7 +31,7 @@
           <div class="w-60 max-w-full px-4">
             <a href="index.html" class="navbar-logo block w-full py-5">
               <img
-                src="assets/images/logo/logo-white.svg"
+                src="../assets/images/logo/logo-white.svg"
                 alt="logo"
                 class="header-logo w-full"
               />
@@ -1404,6 +1404,16 @@
     </div>
     <!-- ====== Hero Section End -->
 
+    <section id="features" class="ud-features">
+      <div class="container">
+        <H1>Hello World</H1>
+        <% products.map((product)=>{ %>
+          <h4><%=product.productTitle %></h4>
+          <p><%=product.productDescription%></p>
+          <p>ราคา : <%=product.productPrice %> บาท</p>
+        <%})%>
+      </div>
+    </section>
 
 
     <!-- ====== Footer Section Start -->
