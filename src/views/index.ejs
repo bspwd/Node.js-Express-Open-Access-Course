@@ -1,0 +1,14 @@
+<head>
+    การใช้งาน EJS แทรกใน Tag HTML
+
+</head>
+<body>
+    <H1>Hello <%=username%></H1>
+    <ul>
+    <%
+        customer.map((i)=>{  %>
+            <li><%=i%></li>
+        <%})
+    %>
+    </ul>
+</body>

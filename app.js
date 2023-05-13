@@ -9,9 +9,12 @@ const port = process.env.PORT;
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname,"/public/")));  //กำหนด Path หน้าเว็บไซต์
 
+app.set("views","./src/views");
+app.set("view engine", "ejs")
+
 app.get("/",(req,res) =>{
 
-    res.send('Hello borntodev1 by Bas');
+    res.render('index',{username: 'Bas555', customer: ["Kitti","Poowadej","Kitty"]});  //ถ้า Static ไม่ทำงานจะแสดงผลส่วนนี้
 
 })
 
